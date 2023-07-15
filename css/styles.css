@@ -1,0 +1,388 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+:root {
+    --bg-color: #FAFAFA;
+}
+
+body {
+    background-color: var(--bg-color);
+}
+
+/* HEADER */
+
+header {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: "title search profile";
+    justify-content: space-between;
+    align-items: center;
+    justify-items: center;
+    box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.25);
+    height: 4rem;
+    background-color: #FFFFFF;
+    margin-bottom: 3rem;
+}
+
+header>h1 {
+    grid-area: title;
+    font-size: 1.5rem;
+    font-weight: 400;
+    align-self: center;
+    margin-bottom: 0.5rem;
+}
+
+header>input {
+    grid-area: search;
+    font-size: 0.875rem;
+    font-weight: 400;
+    border-radius: 0.3125rem;
+    border: 0.3px solid #222;
+    background: var(--bg-color);
+    width: 25rem;
+    height: 2.5rem;
+    align-self: center;
+    margin-bottom: 0.5rem;
+    padding-left: 0.75rem;
+}
+
+header>img {
+    grid-area: profile;
+    height: 3rem;
+    width: 3rem;
+    border-radius: 50%;
+    justify-self: end;
+    margin: 0.5rem 2.19rem 1rem 0rem;
+    align-self: center;
+}
+
+/* MAIN */
+
+    /* post e historias */
+
+main {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    justify-items: center;
+    margin-bottom: 6.88rem;
+}
+
+.columna1 .historias {
+    display: flex;
+    justify-content: space-around;
+    width: 37.5rem;
+    height: 6.25rem;
+    background: #FFF;
+    border: 0.4px solid rgba(34, 34, 34, 0.50);
+    align-items: center;
+    border-radius: 0.3125rem;
+}
+
+.historias img {
+    height: 3rem;
+    width: 3rem;
+    border-radius: 50%;
+}
+
+.post {
+    width: 37.5rem;
+    height: 45rem;
+    align-items: center;
+    border-radius: 0.3125rem;
+    border: 0.4px solid rgba(34, 34, 34, 0.50);
+    background: #FFF;
+    margin-top: 2.5rem;
+}
+
+.post .top {
+    display: flex;
+    height: 4.1875rem;
+    align-items: center;
+}
+
+.post .top > h2 {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.9375rem;
+    font-weight: 500;
+}
+
+.post .top>img {
+    height: 3rem;
+    width: 3rem;
+    border-radius: 50%;
+    margin: 0.56rem;
+}
+
+.post .top .bi-bi-three-dots {
+    margin-left: auto;
+    margin-right: 0.56rem;
+}
+
+.post-container {
+    margin: 1.25rem 3.5rem 1.50rem 3.5rem;
+}
+.post-container>img {
+    width: 31rem;
+    height: 31rem;
+    padding-bottom:0.63rem;
+}
+
+.post-container .text > .icons {
+    height: 1.5rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 6fr;
+    column-gap: 1.12rem;
+    margin-bottom: 0.63rem;
+}
+
+.post-container .text > .icons svg {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.post-container .text {
+    display: grid;
+    grid-template-rows: 0.5fr 0.5fr 0.5fr 0.5fr;
+}
+
+.post-container .text > p:first-of-type {
+    font-family: Inter;
+    font-size: 0.625rem;
+    font-weight: 400;
+}
+
+.post-container .text > p:nth-of-type(2) {
+    color: #A49B9B;
+    font-family: Inter;
+    font-size: 0.625rem;
+    font-weight: 400;
+}
+
+.post-container .text > p:nth-of-type(3), p:nth-of-type(4) {
+    font-family: Inter;
+    font-size: 0.625rem;
+    font-weight: 500;
+}
+
+.post-container .text > span {
+    font-weight: 600;
+}
+
+    /* sugerencias */
+
+.container-perfil {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 0.5fr 1fr;
+    grid-template-areas: 
+    "img text1 action"
+    "sugerencias sugerencias sugerencias";
+    width: 17.75rem;
+    height: auto;
+    row-gap: 2.13rem;
+}
+
+.container-perfil > img {
+    width: 3.125rem;
+    height: 3.0625rem;
+    border-radius: 50%;
+    grid-area: img;
+}
+
+.container-perfil > p:first-of-type {
+    grid-area: text1;
+    font-family: Inter;
+    font-size: 0.625rem;
+    font-weight: 500;
+    align-self: center;
+}
+
+.container-perfil > p > span {
+    color: #808080;
+    font-family: Inter;
+    font-size: 0.625rem;
+    font-weight: 400;
+    align-self: self-start;
+}
+
+.container-perfil > p:nth-of-type(2) {
+    grid-area: action;
+    color: #1CA0F6;
+    font-family: Inter;
+    font-size: 0.625rem;
+    font-weight: 500;
+    align-self: center;
+    justify-self: end;
+}
+
+.container-perfil > p:nth-of-type(3) {
+    grid-area: sugerencias;
+    color: #808080;
+    font-family: Inter;
+    font-size: 0.625rem;
+    font-weight: 700;
+    align-self: self-start;
+}
+
+.container-sugerencias {
+    display: grid;
+    grid-template-columns: 0.5fr 2.5fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    row-gap: 0.62rem;
+    margin-top: -1.9rem;
+}
+
+.container-sugerencias img {
+    border-radius: 50%;
+    width: 1.875rem;
+    height: 1.875rem;
+    align-self: center;
+}
+
+.container-sugerencias p:nth-of-type(even) {
+    color: #1CA0F6;
+    font-family: Inter;
+    font-size: 0.75rem;
+    font-weight: 400;
+    align-self: center;
+}
+
+.container-sugerencias p:nth-of-type(odd) {
+    font-family: Inter;
+    font-size: 0.625rem;
+    font-weight: 500;
+    align-self: center;
+    justify-self: self-start;
+}
+
+/* FOOTER */
+
+footer {
+    height: 1.75rem;
+    width: auto;
+    background-color: #222;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+footer h4 {
+    color: #FFFFFF;
+    font-size:0.625rem;
+    font-weight: 400;
+}
+
+/*  RESPONSIVE */
+
+@media screen and (max-width: 1080px) {
+    main {
+        display: grid;
+        grid-template-columns: 1fr;
+        row-gap: 2rem;
+    }
+
+    .columna2 {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    header > input {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .columna1 {
+        width: 30rem;
+    }
+
+    .columna1 .historias {
+        width: 30rem;
+        height: 6.25rem;
+        justify-content: space-evenly;
+    }
+
+    .historias > img:nth-of-type(even) {
+        display: none;
+    }
+
+    .post {
+        width: 30rem;
+        height: 38rem;
+    }
+
+    .post-container {
+        margin: 1rem 2rem 1rem 2.5rem;
+    }
+
+    .post-container > img {
+        width: 25rem;
+        height: 25rem;
+    }
+}
+
+@media screen and (max-width: 540px) {
+    .columna1 {
+        width: 25rem;
+    }
+
+    .columna1 .historias {
+        width: 25rem;
+        height: 6rem;
+        justify-content: space-evenly;
+    }
+
+    .historias > img:nth-of-type(even) {
+        display: none;
+    }
+
+    .post {
+        width: 25rem;
+        height: 33.5rem;
+    }
+
+    .post-container {
+        margin: 1rem 2rem 1rem 2.5rem;
+    }
+
+    .post-container > img {
+        width: 20rem;
+        height: 20rem;
+    }
+}
+
+@media screen and (max-width: 414px) {
+    .columna1 {
+        width: 20rem;
+    }
+
+    .columna1 .historias {
+        width: 20rem;
+        height: 6rem;
+        justify-content: space-evenly;
+    }
+
+    .historias > img:nth-of-type(even) {
+        display: none;
+    }
+
+    .post {
+        width: 20rem;
+        height: 30rem;
+    }
+
+    .post-container {
+        margin: 1rem 2rem 1rem 1.6rem;
+    }
+
+    .post-container > img {
+        width: 17rem;
+        height: 17rem;
+    }
+}
